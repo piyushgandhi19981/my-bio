@@ -34,14 +34,14 @@ export default function Home() {
             <div>
               {/* Profile Image */}
               <div className="mb-8">
-                <Image
+        <Image
                   src="/profile.jpeg"
                   alt="Piyush Gandhi"
                   width={150}
                   height={150}
                   className="rounded-full border-4 border-slate-700/50 shadow-xl transition-all duration-300 hover:border-teal-400/50 hover:scale-105"
-                  priority
-                />
+          priority
+        />
               </div>
 
               <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
@@ -61,7 +61,7 @@ export default function Home() {
                 aria-label="In-page jump links"
               >
                 <ul className="mt-16 w-max">
-                  {["About", "Experience", "Education"].map((item) => (
+                  {["About", "Experience", "Projects", "Education"].map((item) => (
                     <li key={item}>
                       <a
                         className="group flex items-center py-3 active"
@@ -109,7 +109,7 @@ export default function Home() {
                   <a
                     className="block hover:text-slate-200"
                     href={social.url}
-                    target="_blank"
+            target="_blank"
                     rel="noreferrer noopener"
                     aria-label={`${social.name} (opens in a new tab)`}
                     title={social.name}
@@ -192,7 +192,7 @@ export default function Home() {
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                   Experience
                 </h2>
-              </div>
+        </div>
               <div>
                 <ol className="group/list">
                   {[
@@ -297,7 +297,7 @@ export default function Home() {
                               <a
                                 className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
                                 href={job.link}
-                                target="_blank"
+          target="_blank"
                                 rel="noreferrer noopener"
                                 aria-label={`${job.title} at ${job.company}`}
                               >
@@ -360,7 +360,7 @@ export default function Home() {
                   <a
                     className="inline-flex items-center gap-2 rounded-full bg-teal-400/10 px-6 py-3 font-medium text-teal-300 hover:bg-teal-400/20 hover:text-teal-200 transition-all duration-300 hover:scale-105 group"
                     href="https://drive.google.com/file/d/1tYBI0FbWb4IgZijdb5NxJ4zVcvUZWR2P/view?usp=sharing"
-                    target="_blank"
+          target="_blank"
                     rel="noreferrer noopener"
                     aria-label="Download Resume (opens in a new tab)"
                   >
@@ -393,6 +393,106 @@ export default function Home() {
                     </svg>
                   </a>
                 </div>
+              </div>
+            </section>
+
+            {/* Projects Section */}
+            <section
+              id="projects"
+              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+              aria-label="Key Projects"
+            >
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+                  Projects
+                </h2>
+              </div>
+              <div>
+                <ul className="group/list space-y-12">
+                  {[
+                    {
+                      title: "Enterprise User Management System",
+                      description: "Designed and implemented a scalable user management platform with role-based access control, multi-factor authentication, and workspace-level permissions. Architected the system to support dynamic workspace hierarchies without frontend code changes, enabling seamless enterprise-level expansion.",
+                      features: ["Role & Access Management", "Multi-Factor Authentication", "Bulk User Operations", "Account Security Controls"],
+                      technologies: ["React", "TypeScript", "Redux", "Node.js"],
+                    },
+                    {
+                      title: "Global Search Application",
+                      description: "Built an intelligent cross-module search system with advanced filtering capabilities. Implemented smart search algorithms that automatically detect input patterns and map them to relevant entity fields, providing comprehensive views of customer data including vehicles, transactions, appointments, and deals.",
+                      features: ["Intelligent Search Matching", "Cross-Module Entity Search", "Advanced Filtering", "Unified Customer View"],
+                      technologies: ["React", "TypeScript", "Redux", "Elasticsearch"],
+                    },
+                    {
+                      title: "Audit Logs & Data Tracking System",
+                      description: "Developed a comprehensive audit logging platform that tracks all data modifications across the system. Created a metadata-driven architecture for field-level change tracking with bulk data resolution and time-based filtering, integrated with data warehouse for efficient storage and retrieval.",
+                      features: ["Field-Level Change Tracking", "Metadata Management", "Data Warehouse Integration", "Timeline Visualization"],
+                      technologies: ["React", "TypeScript", "Data Warehouse", "Redux"],
+                    },
+                    {
+                      title: "User Mimicking & Approval Dashboard",
+                      description: "Created internal developer tools including a production user mimicking feature for debugging and an approval management system for service builds, restricted APIs, and property configurations. Streamlined DevOps workflows by automating approval processes.",
+                      features: ["Production User Mimicking", "Service Build Management", "API Access Control", "Automated DevOps Workflows"],
+                      technologies: ["React", "TypeScript", "Node.js", "CI/CD Integration"],
+                    },
+                    {
+                      title: "GDPR & CPRA Compliance Suite",
+                      description: "Implemented region-agnostic compliance management applications supporting GDPR and CPRA regulations. Developed customer consent flows, data retention policies, and field-level preferences for document delivery across multiple regions.",
+                      features: ["Multi-Region Compliance", "Consent Management", "Data Retention Controls", "Privacy Preferences"],
+                      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+                    },
+                    {
+                      title: "Entity Merge & Duplicate Prevention",
+                      description: "Built intelligent systems for preventing duplicate entities and merging existing records. Implemented rule-based matching algorithms, conflict resolution interfaces, and transaction validation to ensure data integrity during merge operations.",
+                      features: ["Smart Duplicate Detection", "Rule-Based Matching", "Conflict Resolution UI", "Transaction Validation"],
+                      technologies: ["React", "TypeScript", "Redux", "Pattern Matching"],
+                    },
+                    {
+                      title: "Localized Address Management",
+                      description: "Developed a universal address component supporting international localization with country-specific validation. Created a backend service architecture for storing addresses across different assets while maintaining module-specific requirements and validation rules.",
+                      features: ["International Localization", "Dynamic Validation", "Zip Code Verification", "Country-State Mapping"],
+                      technologies: ["React", "TypeScript", "Geolocation APIs", "Redux"],
+                    },
+                    {
+                      title: "Employee Payroll Configuration",
+                      description: "Implemented dynamic form generation system for employee management and payroll configuration. Created generic, API-driven forms supporting country-specific taxation rules with automated field rendering based on backend specifications.",
+                      features: ["Dynamic Form Generation", "Multi-Country Taxation", "Employee-User Linking", "Payroll Automation"],
+                      technologies: ["React", "TypeScript", "Dynamic Forms", "Redux"],
+                    },
+                  ].map((project, index) => (
+                    <li key={index}>
+                      <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                        <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                        <div className="z-10 sm:col-span-8">
+                          <h3 className="font-medium leading-snug text-slate-200">
+                            <div className="text-base">{project.title}</div>
+                          </h3>
+                          <p className="mt-2 text-sm leading-normal text-slate-400">
+                            {project.description}
+                          </p>
+                          {project.features && (
+                            <ul className="mt-3 text-sm leading-normal text-slate-400 space-y-1">
+                              {project.features.map((feature, i) => (
+                                <li key={i} className="flex items-start">
+                                  <span className="mr-2 text-teal-300">▸</span>
+                                  <span>{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                          <ul className="mt-3 flex flex-wrap" aria-label="Technologies used">
+                            {project.technologies.map((tech) => (
+                              <li key={tech} className="mr-1.5 mt-2">
+                                <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
+                                  {tech}
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </section>
 
