@@ -34,14 +34,14 @@ export default function Home() {
             <div>
               {/* Profile Image */}
               <div className="mb-8">
-        <Image
+                <Image
                   src="/profile.jpeg"
                   alt="Piyush Gandhi"
                   width={150}
                   height={150}
                   className="rounded-full border-4 border-slate-700/50 shadow-xl transition-all duration-300 hover:border-teal-400/50 hover:scale-105"
-          priority
-        />
+                  priority
+                />
               </div>
 
               <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
@@ -61,19 +61,21 @@ export default function Home() {
                 aria-label="In-page jump links"
               >
                 <ul className="mt-16 w-max">
-                  {["About", "Experience", "Projects", "Education"].map((item) => (
-                    <li key={item}>
-                      <a
-                        className="group flex items-center py-3 active"
-                        href={`#${item.toLowerCase()}`}
-                      >
-                        <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                        <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
-                          {item}
-                        </span>
-                      </a>
-                    </li>
-                  ))}
+                  {["About", "Experience", "Projects", "Education"].map(
+                    (item) => (
+                      <li key={item}>
+                        <a
+                          className="group flex items-center py-3 active"
+                          href={`#${item.toLowerCase()}`}
+                        >
+                          <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+                          <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                            {item}
+                          </span>
+                        </a>
+                      </li>
+                    )
+                  )}
                 </ul>
               </nav>
             </div>
@@ -109,7 +111,7 @@ export default function Home() {
                   <a
                     className="block hover:text-slate-200"
                     href={social.url}
-            target="_blank"
+                    target="_blank"
                     rel="noreferrer noopener"
                     aria-label={`${social.name} (opens in a new tab)`}
                     title={social.name}
@@ -192,7 +194,7 @@ export default function Home() {
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                   Experience
                 </h2>
-        </div>
+              </div>
               <div>
                 <ol className="group/list">
                   {[
@@ -297,7 +299,7 @@ export default function Home() {
                               <a
                                 className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
                                 href={job.link}
-          target="_blank"
+                                target="_blank"
                                 rel="noreferrer noopener"
                                 aria-label={`${job.title} at ${job.company}`}
                               >
@@ -360,7 +362,7 @@ export default function Home() {
                   <a
                     className="inline-flex items-center gap-2 rounded-full bg-teal-400/10 px-6 py-3 font-medium text-teal-300 hover:bg-teal-400/20 hover:text-teal-200 transition-all duration-300 hover:scale-105 group"
                     href="https://drive.google.com/file/d/1tYBI0FbWb4IgZijdb5NxJ4zVcvUZWR2P/view?usp=sharing"
-          target="_blank"
+                    target="_blank"
                     rel="noreferrer noopener"
                     aria-label="Download Resume (opens in a new tab)"
                   >
@@ -412,51 +414,155 @@ export default function Home() {
                   {[
                     {
                       title: "Enterprise User Management System",
-                      description: "Designed and implemented a scalable user management platform with role-based access control, multi-factor authentication, and workspace-level permissions. Architected the system to support dynamic workspace hierarchies without frontend code changes, enabling seamless enterprise-level expansion.",
-                      features: ["Role & Access Management", "Multi-Factor Authentication", "Bulk User Operations", "Account Security Controls"],
+                      description:
+                        "Designed and implemented a scalable user management platform with role-based access control, multi-factor authentication, and workspace-level permissions. Architected the system to support dynamic workspace hierarchies without frontend code changes, enabling seamless enterprise-level expansion.",
+                      features: [
+                        "Role & Access Management",
+                        "Multi-Factor Authentication",
+                        "Bulk User Operations",
+                        "Account Security Controls",
+                      ],
                       technologies: ["React", "TypeScript", "Redux", "Node.js"],
                     },
                     {
                       title: "Global Search Application",
-                      description: "Built an intelligent cross-module search system with advanced filtering capabilities. Implemented smart search algorithms that automatically detect input patterns and map them to relevant entity fields, providing comprehensive views of customer data including vehicles, transactions, appointments, and deals.",
-                      features: ["Intelligent Search Matching", "Cross-Module Entity Search", "Advanced Filtering", "Unified Customer View"],
-                      technologies: ["React", "TypeScript", "Redux", "Elasticsearch"],
+                      description:
+                        "Built an intelligent cross-module search system with advanced filtering capabilities. Implemented smart search algorithms that automatically detect input patterns and map them to relevant entity fields, providing comprehensive views of customer data including vehicles, transactions, appointments, and deals.",
+                      features: [
+                        "Intelligent Search Matching",
+                        "Cross-Module Entity Search",
+                        "Advanced Filtering",
+                        "Unified Customer View",
+                      ],
+                      technologies: [
+                        "React",
+                        "TypeScript",
+                        "Redux",
+                        "Elasticsearch",
+                      ],
                     },
                     {
                       title: "Audit Logs & Data Tracking System",
-                      description: "Developed a comprehensive audit logging platform that tracks all data modifications across the system. Created a metadata-driven architecture for field-level change tracking with bulk data resolution and time-based filtering, integrated with data warehouse for efficient storage and retrieval.",
-                      features: ["Field-Level Change Tracking", "Metadata Management", "Data Warehouse Integration", "Timeline Visualization"],
-                      technologies: ["React", "TypeScript", "Data Warehouse", "Redux"],
+                      description:
+                        "Developed a comprehensive audit logging platform that tracks all data modifications across the system. Created a metadata-driven architecture for field-level change tracking with bulk data resolution and time-based filtering, integrated with data warehouse for efficient storage and retrieval.",
+                      features: [
+                        "Field-Level Change Tracking",
+                        "Metadata Management",
+                        "Data Warehouse Integration",
+                        "Timeline Visualization",
+                      ],
+                      technologies: [
+                        "React",
+                        "TypeScript",
+                        "Data Warehouse",
+                        "Redux",
+                      ],
                     },
                     {
                       title: "User Mimicking & Approval Dashboard",
-                      description: "Created internal developer tools including a production user mimicking feature for debugging and an approval management system for service builds, restricted APIs, and property configurations. Streamlined DevOps workflows by automating approval processes.",
-                      features: ["Production User Mimicking", "Service Build Management", "API Access Control", "Automated DevOps Workflows"],
-                      technologies: ["React", "TypeScript", "Node.js", "CI/CD Integration"],
+                      description:
+                        "Created internal developer tools including a production user mimicking feature for debugging and an approval management system for service builds, restricted APIs, and property configurations. Streamlined DevOps workflows by automating approval processes.",
+                      features: [
+                        "Production User Mimicking",
+                        "Service Build Management",
+                        "API Access Control",
+                        "Automated DevOps Workflows",
+                      ],
+                      technologies: [
+                        "React",
+                        "TypeScript",
+                        "Node.js",
+                        "CI/CD Integration",
+                      ],
+                    },
+                    {
+                      title: "Configurable Ads Integration Platform",
+                      description:
+                        "Developed a comprehensive ad management system supporting multiple ad networks including AdMob, Google Ad Manager, and third-party providers. Created a configurable component architecture that enables dynamic ad placement across different locations within the application with real-time impression tracking and click analytics.",
+                      features: [
+                        "Multi-Network Ad Integration",
+                        "Dynamic Ad Placement",
+                        "Real-Time Impression Tracking",
+                        "Configurable Ad Slots",
+                        "Click Analytics Dashboard",
+                        "Third-Party SDK Support",
+                      ],
+                      technologies: [
+                        "React Native",
+                        "TypeScript",
+                        "AdMob SDK",
+                        "Google Ad Manager",
+                        "Redux",
+                        "Analytics",
+                      ],
                     },
                     {
                       title: "GDPR & CPRA Compliance Suite",
-                      description: "Implemented region-agnostic compliance management applications supporting GDPR and CPRA regulations. Developed customer consent flows, data retention policies, and field-level preferences for document delivery across multiple regions.",
-                      features: ["Multi-Region Compliance", "Consent Management", "Data Retention Controls", "Privacy Preferences"],
-                      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+                      description:
+                        "Implemented region-agnostic compliance management applications supporting GDPR and CPRA regulations. Developed customer consent flows, data retention policies, and field-level preferences for document delivery across multiple regions.",
+                      features: [
+                        "Multi-Region Compliance",
+                        "Consent Management",
+                        "Data Retention Controls",
+                        "Privacy Preferences",
+                      ],
+                      technologies: [
+                        "Next.js",
+                        "React",
+                        "TypeScript",
+                        "Tailwind CSS",
+                      ],
                     },
                     {
                       title: "Entity Merge & Duplicate Prevention",
-                      description: "Built intelligent systems for preventing duplicate entities and merging existing records. Implemented rule-based matching algorithms, conflict resolution interfaces, and transaction validation to ensure data integrity during merge operations.",
-                      features: ["Smart Duplicate Detection", "Rule-Based Matching", "Conflict Resolution UI", "Transaction Validation"],
-                      technologies: ["React", "TypeScript", "Redux", "Pattern Matching"],
+                      description:
+                        "Built intelligent systems for preventing duplicate entities and merging existing records. Implemented rule-based matching algorithms, conflict resolution interfaces, and transaction validation to ensure data integrity during merge operations.",
+                      features: [
+                        "Smart Duplicate Detection",
+                        "Rule-Based Matching",
+                        "Conflict Resolution UI",
+                        "Transaction Validation",
+                      ],
+                      technologies: [
+                        "React",
+                        "TypeScript",
+                        "Redux",
+                        "Pattern Matching",
+                      ],
                     },
                     {
                       title: "Localized Address Management",
-                      description: "Developed a universal address component supporting international localization with country-specific validation. Created a backend service architecture for storing addresses across different assets while maintaining module-specific requirements and validation rules.",
-                      features: ["International Localization", "Dynamic Validation", "Zip Code Verification", "Country-State Mapping"],
-                      technologies: ["React", "TypeScript", "Geolocation APIs", "Redux"],
+                      description:
+                        "Developed a universal address component supporting international localization with country-specific validation. Created a backend service architecture for storing addresses across different assets while maintaining module-specific requirements and validation rules.",
+                      features: [
+                        "International Localization",
+                        "Dynamic Validation",
+                        "Zip Code Verification",
+                        "Country-State Mapping",
+                      ],
+                      technologies: [
+                        "React",
+                        "TypeScript",
+                        "Geolocation APIs",
+                        "Redux",
+                      ],
                     },
                     {
                       title: "Employee Payroll Configuration",
-                      description: "Implemented dynamic form generation system for employee management and payroll configuration. Created generic, API-driven forms supporting country-specific taxation rules with automated field rendering based on backend specifications.",
-                      features: ["Dynamic Form Generation", "Multi-Country Taxation", "Employee-User Linking", "Payroll Automation"],
-                      technologies: ["React", "TypeScript", "Dynamic Forms", "Redux"],
+                      description:
+                        "Implemented dynamic form generation system for employee management and payroll configuration. Created generic, API-driven forms supporting country-specific taxation rules with automated field rendering based on backend specifications.",
+                      features: [
+                        "Dynamic Form Generation",
+                        "Multi-Country Taxation",
+                        "Employee-User Linking",
+                        "Payroll Automation",
+                      ],
+                      technologies: [
+                        "React",
+                        "TypeScript",
+                        "Dynamic Forms",
+                        "Redux",
+                      ],
                     },
                   ].map((project, index) => (
                     <li key={index}>
@@ -479,7 +585,10 @@ export default function Home() {
                               ))}
                             </ul>
                           )}
-                          <ul className="mt-3 flex flex-wrap" aria-label="Technologies used">
+                          <ul
+                            className="mt-3 flex flex-wrap"
+                            aria-label="Technologies used"
+                          >
                             {project.technologies.map((tech) => (
                               <li key={tech} className="mr-1.5 mt-2">
                                 <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
